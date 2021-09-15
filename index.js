@@ -3,7 +3,8 @@ const interpretButton = document.querySelector("#interpret-cnp");
 const resultList = document.querySelector(".result-list");
 
 function extractGender(cnp) {
-  let genderCode = cnp.substring(1);
+  let genderCode = cnp.substring(0, 1);
+  genderCode = Number(genderCode);
 
   if (genderCode === 1) {
     return "masculin";
@@ -13,9 +14,9 @@ function extractGender(cnp) {
 }
 
 function extractBirthday(cnp) {
-  let day = cnp.substring(1, 3);
+  let year = cnp.substring(1, 3);
   let month = cnp.substring(3, 5);
-  let year = cnp.substring(5, 7);
+  let day = cnp.substring(5, 7);
 
   if (year < 22) {
     year = "20" + year;
