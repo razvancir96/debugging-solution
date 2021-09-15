@@ -1,6 +1,6 @@
 const input = document.querySelector("#cnp");
-const interpretButton = document.querySelector("#interpet-cnp");
-const resultList = document.querySelector("#result-list");
+const interpretButton = document.querySelector("#interpret-cnp");
+const resultList = document.querySelector(".result-list");
 
 function extractGender(cnp) {
   let genderCode = cnp.substring(1);
@@ -27,7 +27,7 @@ function extractBirthday(cnp) {
 }
 
 interpretButton.addEventListener("click", function () {
-  const inputValue = input.value;
+  const cnp = input.value;
 
   const gender = extractGender(cnp);
   const birthday = extractBirthday(cnp);
