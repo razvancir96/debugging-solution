@@ -1,4 +1,4 @@
-const input = document.querySelector("#cnp");
+const input = document.querySelector("#cnp-input");
 const interpretButton = document.querySelector("#interpret-cnp");
 const resultList = document.querySelector(".result-list");
 
